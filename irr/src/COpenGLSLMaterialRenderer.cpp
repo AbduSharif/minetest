@@ -404,7 +404,7 @@ bool COpenGLSLMaterialRenderer::linkProgram()
 			// Intel driver bug that seems to primarily happen on Win 8.1 or older:
 			// There are >0 uniforms yet the driver reports a max name length of 0.
 			os::Printer::log("GLSL (> 2.x): failed to retrieve uniform information", ELL_WARNING);
-			maxlen = 256; // hope that this is enough
+			maxlen = 512; // hope that this is enough
 		}
 
 		// seems that some implementations use an extra null terminator
@@ -476,7 +476,7 @@ bool COpenGLSLMaterialRenderer::linkProgram()
 			// Intel driver bug that seems to primarily happen on Win 8.1 or older:
 			// There are >0 uniforms yet the driver reports a max name length of 0.
 			os::Printer::log("GLSL: failed to retrieve uniform information", ELL_WARNING);
-			maxlen = 256; // hope that this is enough
+			maxlen = 512; // hope that this is enough
 		}
 
 		// seems that some implementations use an extra null terminator
